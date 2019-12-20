@@ -14,11 +14,11 @@ app.use(
 )
 
 let users = [{ id: 1, name: 'user1' }, { id: 2, name: 'user2' }]
-app.get('/api/users', function(req, res) {
+app.get('/api/users', function (req, res) {
   res.json(users)
 })
 
-app.post('/api/login', function(req, res) {
+app.post('/api/login', function (req, res) {
   let user = req.body
   req.session.user = user
   res.json({
@@ -30,7 +30,7 @@ app.post('/api/login', function(req, res) {
   })
 })
 
-app.get('/api/logout', function(req, res) {
+app.get('/api/logout', function (req, res) {
   req.session.user = null
   res.json({
     code: 0,
@@ -40,7 +40,7 @@ app.get('/api/logout', function(req, res) {
   })
 })
 
-app.get('/api/user', function(req, res) {
+app.get('/api/user', function (req, res) {
   let user = req.session.user
   if (user) {
     res.json({
