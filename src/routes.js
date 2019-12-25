@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Route } from 'react-router-dom'
 import App from './containers/App'
-import Home from './contaniners/Home'
+import Home from './containers/Home'
 
 export default [
   {

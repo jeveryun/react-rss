@@ -9,7 +9,7 @@ import React, { Component } from 'react'
 
 export default function withStyles (Comp, styles) {
   class ProxyComponent extends Component {
-    componentWillMount () {
+    UNSAFE_componentWillMount () {
       if (this.props.staticContext) {
         // isomorphic-style-loader 这个 loader 会处理所有的样式文件
         // 每个样式文件会有一个 _getCss 属性， 可以得到处理后的 css 源代码

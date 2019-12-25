@@ -1,4 +1,4 @@
-import * types from '../action-types'
+import * as types from '../action-types'
 
 let initState = {
   user: null,

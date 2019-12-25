@@ -7,7 +7,7 @@ import reducers from './reducers'
 
 export function getServerStore (req) {
   // withExtraArgument 用来给 thunk 传递额外的参数
-  return createStore(reducers, applyMiddleware(thunk.withExtraArgument(createServerRequest(req)), logger))
+  return createStore(reducers, applyMiddleware(thunk.withExtraArgument(createServerRequest(req)), logger));
 }
 
 export function getClientStore () {

@@ -12,14 +12,14 @@ class App extends Component {
         {/*因为 Header 组件并不是通过静态路由渲染出来的，所以需要手动给它传递一个属性值 */}
         <Header staticContext={this.props.staticContext}></Header>
         <div className="container" className={styles.app}>
-          {renderRoutes(this.props.routes)}
+          {renderRoutes(this.props.route.routes)}
         </div>
       </Fragment>
     )
   }
 }
 
-app.loadData = function (store) {
+App.loadData = function (store) {
   return store.dispatch(actions.getUser())
 }
 
